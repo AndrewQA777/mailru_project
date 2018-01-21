@@ -14,7 +14,7 @@ class InboxPageLocators:
 
 class ComposePageLocators:
 
-    RECEPIENT_FIELD = (By.CSS_SELECTOR, 'textarea[data-original-name="To"]')
+    RECIPIENT_FIELD = (By.CSS_SELECTOR, 'textarea[data-original-name="To"]')
 
     SUBJECT_FIELD   = (By.NAME, 'Subject')
 

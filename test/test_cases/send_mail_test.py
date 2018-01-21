@@ -27,12 +27,12 @@ class SendMailTest(unittest.TestCase):
     def test_open_editor_from_inbox(self):
         inbox_page = page.InboxPage(self.driver)
         inbox_page.click_compose_button()
-        helper.wait_until_present(self.driver, locators.ComposePageLocators.RECEPIENT_FIELD)
+        helper.wait_until_present(self.driver, locators.ComposePageLocators.RECIPIENT_FIELD)
         assert data["urlMarkers"]["compose"] in self.driver.current_url, "URL doesn't contain '/compose'"
 
     def test_send_message(self):
         compose_page = page.ComposePage(self.driver)
-        compose_page.type_recepient(data["users"]["recipient"]["email"])
+        compose_page.type_recipient(data["users"]["recipient"]["email"])
         compose_page.type_subject("Test message " + strftime("%H%M%S", gmtime()))
         helper.switch_to_frame(self.driver, locators.ComposePageLocators.EDITOR_IFRAME)
         compose_page.type_message(data["messageText"])

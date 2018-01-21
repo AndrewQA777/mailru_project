@@ -32,8 +32,8 @@ class InboxPage(BasePage):
 
 class ComposePage(BasePage):
 
-    def type_recepient(self, recepient):
-        helper.send_keys(self.driver, recepient, *locators.ComposePageLocators.RECEPIENT_FIELD)
+    def type_recipient(self, recipient):
+        helper.send_keys(self.driver, recipient, *locators.ComposePageLocators.RECIPIENT_FIELD)
 
     def type_subject(self, subject):
         helper.send_keys(self.driver, subject, *locators.ComposePageLocators.SUBJECT_FIELD)
